@@ -8,8 +8,9 @@ public:
             }else{ 
                 Length= 1; 
             }
-            if (Length >= k) ans++;
+            if (Length >=k) ans++;
         }
         return ans;
+        
     }
 };
