@@ -10,19 +10,25 @@ public:
     //    }
     //    return -1;
 
-    // VISITED SOLUTION
+    // VISITED SOLUTION -- O(N)
 
-    int ans = -1;
-    for(int i=0; i<nums.size();i++){
-        int index = abs(nums[i]);
-        if(nums[index] < 0){
-            ans = index;
-            break; 
+    // int ans = -1;
+    // for(int i=0; i<nums.size();i++){
+    //     int index = abs(nums[i]);
+    //     if(nums[index] < 0){
+    //         ans = index;
+    //         break; 
             
-        }
-        nums[index] *= -1;
+    //     }
+    //     nums[index] *= -1;
 
+    // }
+    //     return ans;
+
+    // POSITIONING 
+    while(nums[0] != nums[nums[0]]){
+        swap(nums[0], nums[nums[0]]);
     }
-        return ans;
+    return nums[0];
     }
 };
